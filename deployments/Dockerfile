@@ -35,7 +35,7 @@ RUN apt-get install google-cloud-cli -y
 # Update kubectl
 RUN apt-get install kubectl
 
-RUN apt-get install google-cloud-sdk-gke-gcloud-auth-plugin
+RUN apt-get install google-cloud-sdk-gke-gcloud-auth-plugin -y
 
 RUN apt-get -y install git
 RUN git --version
