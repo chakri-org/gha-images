@@ -22,6 +22,9 @@ RUN helm version
 RUN apt-get install python3 -y
 RUN python3 --version
 
+# Install Azure CLI
+RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
+
 # Install the Google Cloud SDK
 RUN apt-get install apt-transport-https ca-certificates gnupg curl sudo -y
 RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
